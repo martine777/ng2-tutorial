@@ -8,6 +8,9 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MaterialModule } from '@angular/material';
+import 'hammerjs';
+
 import { Test2Component } from './test2/test2.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
@@ -17,6 +20,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     CommonModule,
     FormsModule,
     HttpModule,
+    MaterialModule.forRoot(),
     TodoRoutingModule
   ],
   declarations: [

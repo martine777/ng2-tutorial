@@ -54,3 +54,4 @@ body {
 .info a:hover {
     text-decoration: underline;
 }
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';

@@ -8,13 +8,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'todo/test2',
+    component: Test2Component
+  },
+  {
     path: 'todo/:filter',
     canActivate: [AuthGuardService],
     component: TodoComponent
-  },
-  {
-    path: 'todo/test2',
-    component: Test2Component
   },
   // {
   //   path: '',

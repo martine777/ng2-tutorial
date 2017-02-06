@@ -1,6 +1,7 @@
 import { CoreModule } from './core/core.module';
 import { TodoModule } from './todo/todo.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { MaterialModule } from '@angular/material';
 import { NgModule, Inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -39,7 +40,8 @@ console.log(typeof tmpFun2);
     // InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
     AppRoutingModule,
     TodoModule,
-    CoreModule 
+    CoreModule,
+    MaterialModule.forRoot()
   ],
   providers: [
     // { provide: 'auth', useClass: AuthService },
