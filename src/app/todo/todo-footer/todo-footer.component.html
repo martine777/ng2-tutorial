@@ -1,0 +1,14 @@
+<footer class="footer" *ngIf="itemCount > 0">
+  <span class="todo-count">
+      <strong>{{itemCount }} </strong>{{itemCount  == 1 ? 'item' : 'items'}} left 
+  </span>
+  <ul class="filters">
+    <li><a routerLink="/todo/ALL">All</a></li>
+    <li><a routerLink="/todo/ACTIVE">Active</a></li>
+    <li><a routerLink="/todo/COMPLETED">Completed</a></li>
+  </ul>
+  <button class="clear-completed" (click)="onClick()">Clear completed</button>
+  <input type="button" value="input2" (click)="clickMe(1)" style="float : right;position:relative;" />
+  <!--<button>hehe</button>-->
+  <!--<input type="button" value="hehe">-->
+</footer>

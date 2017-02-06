@@ -7,8 +7,8 @@ describe('ng2-tutorial App', function() {
     page = new Ng2TutorialPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying This is a hello-angular app', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('This is a hello-angular app');
   });
 });

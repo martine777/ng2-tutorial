@@ -1,0 +1,24 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="todo.component.css">
+</head>
+
+<body>
+-->
+<section class="todoapp">
+  <app-todo-header (textChanges)="onTextChanged($event)" (onEnterUp)="addTodo()"></app-todo-header>
+  <app-todo-list [todos]="todos" (onRemoveTodo)="removeTodo($event)" (onToggleTodo)="toggleTodo($event)" (onToggleAll)="toggleAll()">
+  </app-todo-list>
+  <app-todo-footer [itemCount]="todos?.length" (onClear)="clearCompleted()">
+  </app-todo-footer>
+</section>
+<!--<router-outlet></router-outlet>-->
+<!--
+</body>
+
+</html>-->
