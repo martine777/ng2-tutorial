@@ -1,9 +1,19 @@
 .example-container {
-  width: 500px;
+  width: 800px;
 }
 
 .example-button-row {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.flex-container{
+
+}
+.example-form {
+  width: 500px;
+}
+
+.example-full-width {
+  width: 100%;
 }

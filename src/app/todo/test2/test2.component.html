@@ -1,4 +1,112 @@
 <div class="example-container">
+  <md-card style="width:100%;border: 10px;border-color: red;" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10%">
+    <md-checkbox color="primary" required fxFlex="33%" fxFlexAlign="baseline">检查我!!</md-checkbox><br>
+    <md-input-container hintLabel="请输入姓名" dividerColor="accent" fxFlex="33%" fxFlexAlign="baseline">
+      <b md-prefix>姓名</b>
+      <input md-input placeholder="姓名">
+    </md-input-container>
+    <md-input-container hintLabel="请输入生日" dividerColor="accent" fxFlex="33%" fxFlexAlign="baseline">
+      <input type="date" md-input placeholder="生日">
+    </md-input-container>
+    <md-radio-group fxFlex="10%" fxLayout="column" fxFlexAlign="baseline">
+      <md-radio-button value="1" fxFlex="50%">中国台湾</md-radio-button>
+      <md-radio-button value="2" fxFlex="50%">中国香港</md-radio-button>
+    </md-radio-group>
+
+  </md-card>
+  <md-card>
+    <md-input-container><input type="text" md-input></md-input-container>
+    <md-select placeholder="你喜欢的食物" name="food1" #food2 [(ngModel)]="selected">
+      <md-option value="苹果" #o1 (onSelect)="process1(o1.value)">苹果</md-option>
+      <md-option value="梨子" #o2 (onSelect)="process1(o2.value)">梨子</md-option>
+      <md-option value="菠萝" #o3 (onSelect)="process1(o3.value)">菠萝</md-option>
+    </md-select>
+    你选择的食物是：{{selected}}.
+  </md-card>
+  <md-card fxLayout="row" fxLayoutGap="10px" style="width: 600px;border:1px solid black;">
+    <md-slider min="1" max="5" step="0.5" value="1.5" [(ngModel)]="slider" thumbLabel tickInterval="1"></md-slider>
+    <md-slider min="1" max="5" step="0.5" value="1.5" [(ngModel)]="slider"></md-slider>
+    <md-slide-toggle style="display: block;position: relative;margin-bottom: 100px;">Slide me!</md-slide-toggle>
+  </md-card>
+  <md-card>
+    <md-input-container hintLabel="请输入生日2" dividerColor="accent">
+      <input type="datetime-local" md-input placeholder="生日2">
+    </md-input-container>
+    <md-input-container>
+      <input type="tel" md-input placeholder="tel">
+    </md-input-container>
+    <md-input-container>
+      <input type="password" md-input placeholder="password">
+    </md-input-container>
+    <md-input-container>
+      <input type="search" md-input placeholder="search">
+    </md-input-container>
+    <md-input-container>
+      <input type="number" md-input placeholder="number">
+    </md-input-container>
+    <md-input-container>
+      <input type="month" md-input placeholder="month">
+    </md-input-container>
+    <md-input-container>
+      <input type="week" md-input placeholder="week">
+    </md-input-container>
+    <md-input-container>
+      <input type="url" md-input placeholder="url">
+    </md-input-container>
+    <md-input-container>
+      <input type="time" md-input placeholder="time">
+    </md-input-container>
+  </md-card>
+  <form class="example-form">
+    <md-input-container class="example-full-width">
+      <input md-input placeholder="Company (disabled)" disabled value="Google">
+    </md-input-container>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <md-input-container class="example-full-width">
+            <input md-input placeholder="First name">
+          </md-input-container>
+        </td>
+        <td>
+          <md-input-container class="example-full-width">
+            <input md-input placeholder="Long Last Name That Will Be Truncated">
+          </md-input-container>
+        </td>
+      </tr>
+    </table>
+
+    <p>
+      <md-input-container class="example-full-width">
+        <textarea md-input placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+      </md-input-container>
+      <md-input-container class="example-full-width">
+        <textarea md-input placeholder="Address 2"></textarea>
+      </md-input-container>
+    </p>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <md-input-container class="example-full-width">
+            <input md-input placeholder="City">
+          </md-input-container>
+        </td>
+        <td>
+          <md-input-container class="example-full-width">
+            <input md-input placeholder="State">
+          </md-input-container>
+        </td>
+        <td>
+          <md-input-container class="example-full-width">
+            <input md-input #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+            <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+          </md-input-container>
+        </td>
+      </tr>
+    </table>
+  </form>
   <h3>Normal Buttons</h3>
   <div class="button-row">
     <button md-button>Flat button</button>
@@ -11,7 +119,24 @@
   <div class="example-button-row">
     <a md-button routerLink=".">Flat button</a>
     <a md-raised-button routerLink=".">Raised button</a>
-    <a md-fab routerLink="."><md-icon>check</md-icon></a>
-    <a md-mini-fab routerLink="."><md-icon>check</md-icon></a>
+    <a md-fab routerLink=".">
+      <md-icon>check</md-icon>
+    </a>
+    <a md-mini-fab routerLink=".">
+      <md-icon>check</md-icon>
+    </a>
   </div>
+  <h3>my own component</h3>
+  <div>
+    <md-checkbox labelPosition="before" indeterminate="true">abc</md-checkbox>
+  </div>
+  <div class="flex-container" fxLayout="row-reverse" fxLayoutWrap>
+    <div class="flex-item" fxFlex="10">aaaa </div>
+    <div class="flex-item" fxFlex="40"> bbbb</div>
+    <div class="flex-item" fxFlex="40">ccccc </div>
+    <div class="flex-item" fxFlex="20" fxHide="true">dssddd</div>
+    <div class="flex-item" fxFlex="40"> eeeee</div>
+    <div class="flex-item" fxFlex="40">fffff </div>
+  </div>
+
 </div>

@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 
 import { Test2Component } from './test2/test2.component';
@@ -21,6 +22,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
+    FlexLayoutModule.forRoot(),
     TodoRoutingModule
   ],
   declarations: [

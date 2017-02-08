@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test2.component.css']
 })
 export class Test2Component implements OnInit {
-
+  selected: string;
+  slider: number;
   constructor() { }
 
   ngOnInit() {
+  }
+  process1(event: any) {
+    console.log(this.selected, '事件信息', event);
   }
 
 }
